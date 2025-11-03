@@ -1,1 +1,10 @@
 # MSDS-451-Assignment-3
+
+## Overview
+This assignment was meant to focus on automated, algorithmic trading combined with backtesting. There were no machine learning requirements nor was it required to involve market regime detection. The strategy I employed for my automated trading was a simple momentum strategy. This strategy was stucturally inspired by Clenow's momentum model in his textbook Trading Evolved: Anyone Can Build Killer Trading Strategies in Python (full reference in attached PDF). Thorough backtesting was employed, and the Sharpe Ratio was used to judge fund returns relative to their volatility. The momentum strategy was backtested against a market-cap-weighted index of non-financial NASDAQ-listed stocks, in this case the QQQ ETF. The QQQ index served as a benchmark to compare my portfolio's performance. 
+
+## Guide
+The following project can be completed in a Jupyter Notebook environment or the Python script environment. For the purposes of this assignment it was completed using Jupyter Notebook. You can find both the ipnyb file and the associated HTML in this Assignment 3 repository. There is also my technical report that serves as the write-up to the code, and the results of the experiments. 
+
+## AI Disclaimer
+Google Colab's Gemini feature was used to generate the plots seen in the report. As well as resolve an ongoing issue I initially had with the data. A note to users: change the momentum constraints as it pertains to your specific historical data. My initial plots were showing the correct output for the QQQ benchmark, but my portfolio was staying flat -- which meant zero investment. This was because I set the minimum momentum value way too high, following Clenow's example of 40, and this caused every asset to essentially register as being never bought or sold because my values were much smaller. For my data, the correct value was 0.0005. Gemini read through my data and printed the possible ranges of minimum values given the data and found the right value for my experiment. 
